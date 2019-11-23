@@ -1,0 +1,25 @@
+{
+  "name": "hiker",
+  "version": "1.0.0",
+  "description": "Web application for finding hiking buddies",
+  "main": "index.js",
+  "scripts": {
+    "server": "cd api && npm start",
+    "client": "cd client && npm start",
+    "start": "concurrently \"npm run server\" \"npm run client\"",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/MarinaOrzechowski/Hiker.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/MarinaOrzechowski/Hiker/issues"
+  },
+  "homepage": "https://github.com/MarinaOrzechowski/Hiker#readme",
+  "devDependencies": {
+    "concurrently": "^5.0.0"
+  }
+}
