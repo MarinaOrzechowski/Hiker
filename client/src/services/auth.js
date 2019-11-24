@@ -1,4 +1,4 @@
-// This service object was adapted from here: 
+// This service object was adapted from here:
 //  https://tylermcginnis.com/react-router-protected-routes-authentication/
 //
 // This version was modified to use real authentication implemented
@@ -8,7 +8,7 @@
 const auth = {
   isAuthenticated: false,
   authenticate(email, password) {
-    return fetch('/api/auth/login', { 
+    return fetch('/api/auth/login', {
       method: 'POST',
       body: JSON.stringify({ email, password }),
       headers: {
@@ -28,7 +28,7 @@ const auth = {
       });
   },
   signout(cb) {
-    return fetch('/api/auth/logout', { 
+    return fetch('/api/auth/logout', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',

@@ -6,9 +6,15 @@ class Registration extends React.Component {
     failed: false,
     firstName: '',
     lastName: '',
+    phoneNumber:'',
     email: '',
     password: '',
     confirmPassword: '',
+    hikingExperience:'',
+    age: 18,
+    gender: '',
+    profileDescription:'',
+    //profilePicture
   }
 
   fieldChanged = (fieldName) => {
@@ -27,7 +33,7 @@ class Registration extends React.Component {
   render() {
     return (
       <div className='container-fluid'>
-        <div className='row my-4 mx-5 border'>
+        <div className='row my-4 mx-5'>
           <div className='col'>
             <img src={logo} alt='Logo'/>
           </div>
@@ -50,6 +56,15 @@ class Registration extends React.Component {
                   placeholder='Last name'
                   value={this.state.lastName}
                   onChange={this.fieldChanged('lastName')} />
+              </div>
+              <div className='form-group'>
+                <input
+                  type='tel'
+                  className='form-control'
+                  name='phoneNumber'
+                  placeholder='Phone number'
+                  value={this.state.phoneNumber}
+                  onChange={this.fieldChanged('phoneNumber')} />
               </div>
               <div className='form-group'>
                 <input
@@ -77,6 +92,49 @@ class Registration extends React.Component {
                   placeholder='Confirm password'
                   value={this.state.confirmPassword}
                   onChange={this.fieldChanged('confirmPassword')} />
+              </div>
+              <div className='form-group'>
+              <label for='hikingExperience'>Hiking experience</label>
+                <select
+                  className='form-control'
+                  name='hikingExperience'
+                  value={this.state.hikingExperience}
+                  onChange={this.fieldChanged('hikingExperience')}>
+                  <option>Beginner</option>
+                  <option>Experienced</option>
+                  <option>Expert</option>
+                  <option>Literally the god of hiking</option>
+                </select>
+              </div>
+              <div className='form-group'>
+                <label for='age'>Age</label>
+                <input
+                  type='number'
+                  className='form-control'
+                  name='age'
+                  value={this.state.age}
+                  onChange={this.fieldChanged('age')} />
+              </div>
+              <div className='form-group'>
+              <label for='gender'>Gender</label>
+                <select
+                  className='form-control'
+                  name='gender'
+                  value={this.state.gender}
+                  onChange={this.fieldChanged('gender')}>
+                  <option>Female</option>
+                  <option>Male</option>
+                  <option>Other</option>
+                </select>
+              </div>
+              <div>
+                <label for='profileDescription'>Tell us about yourself</label>
+                <textarea
+                  class='form-control'
+                  name='profileDescription'
+                  value={this.state.profileDescription}
+                  onChange={this.fieldChanged('profileDescription')}>
+                </textarea>
               </div>
               <button
                 type='submit'

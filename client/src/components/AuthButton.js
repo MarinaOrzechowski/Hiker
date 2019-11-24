@@ -1,5 +1,6 @@
 import React from 'react';
 import { withRouter, Link } from 'react-router-dom';
+import profile from '../profiles/profile.png';
 
 import auth from '../services/auth';
 
@@ -26,6 +27,7 @@ const AuthButton = withRouter(({ history }) => {
   return (
     <div>
       Welcome!
+      <Link to="/profile"><img src={profile} alt='profile' className='ml-3 mr-1' /></Link>
       <button className={classes} onClick={logout}>Logout</button>
     </div>
   );
